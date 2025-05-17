@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Фильмы</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background:#111; color:#f8f9fa }
+    .btn-primary { background:#e83e8c; border:none }
+    .btn-primary:hover { background:#d63384 }
+    .actions-col { text-align:center; min-width:170px }
+  </style>
+</head>
+<body class="p-4">
+<div class="container">
+  <h1 class="mb-4 text-center">🎬 Фильмы</h1>
+
+  <form id="addForm" class="row g-2 align-items-center mb-4">
+    <div class="col-sm"><input class="form-control" name="title" placeholder="Название" required></div>
+    <div class="col-sm"><input class="form-control" name="genre" placeholder="Жанры (через ,)"></div>
+    <div class="col-sm"><input type="number" class="form-control" name="duration" placeholder="Минут"></div>
+
+    <div class="col-auto form-check">
+      <input class="form-check-input" type="checkbox" id="isAvailable" name="isAvailable" checked>
+      <label class="form-check-label" for="isAvailable">В прокате</label>
+    </div>
+
+    <div class="col-auto"><button class="btn btn-primary">Добавить</button></div>
+  </form>
+
+  <table class="table table-dark table-striped align-middle">
+    <thead>
+      <tr><th>Название</th><th>Жанры</th><th>Длительность</th><th>Доступен</th><th class="actions-col">Действия</th></tr>
+    </thead>
+    <tbody id="moviesBody"></tbody>
+  </table>
+
+  <a href="index.html" class="btn btn-outline-light mt-3">← Назад</a>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Изменить фильм</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editForm" class="row g-2">
+          <input type="hidden" name="id">
+          <div class="col-12"><input class="form-control" name="title" required></div>
+          <div class="col-12"><input class="form-control" name="genre"></div>
+          <div class="col-6"><input type="number" class="form-control" name="duration"></div>
+          <div class="col-6 d-flex align-items-center">
+            <label class="form-check-label ms-2">
+              <input type="checkbox" name="isAvailable" class="form-check-input me-2">В прокате
+            </label>
+          </div>
+          <div class="col-12"><input type="date" class="form-control" name="releaseDate"></div>
+        </form>
+      </div>
+      <div class="modal-footer border-0">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary" id="saveBtn">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const tbody = $('#moviesBody');
+const td = t => { const d=document.createElement('td'); d.textContent=t; return d; }
+const btn = (l, cls, cb) => { const b=document.createElement('button'); b.className=`btn btn-sm ${cls}`; b.textContent=l; b.onclick=cb; return b; }
+
+async function loadMovies(){
+  const data = await (await fetch('/movies')).json();
+  tbody.replaceChildren();
+
+  data.forEach(m=>{
+    const tr=document.createElement('tr');
+    tr.append(td(m.title));
+    tr.append(td((m.genre||[]).join(', ')));
+    tr.append(td(m.duration ?? ''));
+    tr.append(td(m.isAvailable ? '✅' : '❌'));
+
+    const act=document.createElement('td'); act.className='actions-col';
+    act.append(
+      btn('Изменить','btn-primary', ()=>openEdit(m.id)),
+      btn('Редактировать','btn-secondary ms-1', ()=>patch(m.id)),
+      btn('Удалить','btn-danger ms-1',     ()=>del(m.id))
+    );
+    tr.append(act); tbody.append(tr);
+  });
+}
+
+$('#addForm').addEventListener('submit', async e=>{
+  e.preventDefault(); const f=e.target;
+  await fetch('/movies',{method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      title:f.title.value,
+      genre:f.genre.value.split(',').map(s=>s.trim()).filter(Boolean),
+      duration:Number(f.duration.value),
+      isAvailable:f.isAvailable.checked
+    })});
+  f.reset(); loadMovies();
+});
+
+async function patch(id){
+  const t=prompt('Новое название:'); if(!t) return;
+  await fetch('/movies/'+id,{method:'PATCH', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({title:t})});
+  loadMovies();
+}
+
+async function del(id){
+  if(!confirm('Удалить фильм?')) return;
+  await fetch('/movies/'+id,{method:'DELETE'}); loadMovies();
+}
+
+let modal, form;
+function openEdit(id){
+  fetch('/movies/'+id).then(r=>r.json()).then(m=>{
+    if(!modal){ modal=new bootstrap.Modal('#editModal'); form=$('#editForm'); $('#saveBtn').onclick=savePut; }
+    form.id.value=m.id;
+    form.title.value=m.title;
+    form.genre.value=(m.genre||[]).join(', ');
+    form.duration.value=m.duration ?? '';
+    form.isAvailable.checked=m.isAvailable;
+    form.releaseDate.value=m.releaseDate ? m.releaseDate.substring(0,10) : '';
+    modal.show();
+  });
+}
+async function savePut(){
+  const f=form;
+  await fetch('/movies/'+f.id.value,{method:'PUT', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      title:f.title.value,
+      genre:f.genre.value.split(',').map(s=>s.trim()).filter(Boolean),
+      duration:Number(f.duration.value),
+      isAvailable:f.isAvailable.checked,
+      releaseDate:f.releaseDate.value || new Date().toISOString()
+    })});
+  modal.hide(); loadMovies();
+}
+
+loadMovies();
+</script>
+</body>
+</html>

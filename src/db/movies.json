@@ -1,0 +1,205 @@
+[
+  {
+    "id": "8e007844-33c7-4a60-ab0a-8624f780e7ed",
+    "title": "Хрустальная ночь",
+    "genre": [
+      "боевик",
+      "приключения"
+    ],
+    "duration": 83,
+    "isAvailable": false,
+    "releaseDate": "2005-12-26T00:00:00"
+  },
+  {
+    "id": "e0a6f9d0-0345-4823-b2a9-a2c07cf388d7",
+    "title": "Красная планета",
+    "genre": [
+      "комедия"
+    ],
+    "duration": 93,
+    "isAvailable": true,
+    "releaseDate": "2021-06-27T00:00:00"
+  },
+  {
+    "id": "df1d7a46-51ac-4087-9e55-2619eb645d9e",
+    "title": "Стеклянный город",
+    "genre": [
+      "драма"
+    ],
+    "duration": 83,
+    "isAvailable": true,
+    "releaseDate": "2004-10-22T00:00:00"
+  },
+  {
+    "id": "6d439624-50f0-434e-a913-71b9e24900b1",
+    "title": "В погоне за мечтой",
+    "genre": [
+      "драма"
+    ],
+    "duration": 151,
+    "isAvailable": true,
+    "releaseDate": "2024-02-25T00:00:00"
+  },
+  {
+    "id": "c4c9a10f-b144-4eef-81dc-1f4008ddd666",
+    "title": "Золотой век",
+    "genre": [
+      "аниме"
+    ],
+    "duration": 108,
+    "isAvailable": false,
+    "releaseDate": "2021-06-07T00:00:00"
+  },
+  {
+    "id": "803ff29d-2dd5-4a99-88ce-98f41b671131",
+    "title": "Сердце океана",
+    "genre": [
+      "драма"
+    ],
+    "duration": 100,
+    "isAvailable": false,
+    "releaseDate": "2010-04-06T00:00:00"
+  },
+  {
+    "id": "15f933b2-90fc-4409-b448-e3c1950953ae",
+    "title": "Тёмная башня",
+    "genre": [
+      "комедия"
+    ],
+    "duration": 107,
+    "isAvailable": false,
+    "releaseDate": "1999-08-02T00:00:00"
+  },
+  {
+    "id": "de3bc8fa-1580-447e-90f9-e3c7046ca049",
+    "title": "Пленники времени",
+    "genre": [
+      "аниме"
+    ],
+    "duration": 92,
+    "isAvailable": false,
+    "releaseDate": "2010-06-06T00:00:00"
+  },
+  {
+    "id": "14fdb32d-0932-456d-bd1e-9615b73fe78f",
+    "title": "Последний герой",
+    "genre": [
+      "драма"
+    ],
+    "duration": 138,
+    "isAvailable": true,
+    "releaseDate": "2011-12-24T00:00:00"
+  },
+  {
+    "id": "a3ccca9e-9bb5-45c8-8a9f-df10b1d0354f",
+    "title": "Звёздный путь",
+    "genre": [
+      "ужасы"
+    ],
+    "duration": 160,
+    "isAvailable": false,
+    "releaseDate": "2020-11-24T00:00:00"
+  },
+  {
+    "id": "c33a9093-27fe-4550-97b6-6ec7ffecfdbf",
+    "title": "Дорога домой",
+    "genre": [
+      "боевик",
+      "приключения"
+    ],
+    "duration": 85,
+    "isAvailable": true,
+    "releaseDate": "2007-12-25T00:00:00"
+  },
+  {
+    "id": "ce24f1ba-6299-4be9-a700-3781822cc9fe",
+    "title": "Сияние",
+    "genre": [
+      "фантастика"
+    ],
+    "duration": 92,
+    "isAvailable": false,
+    "releaseDate": "2007-06-21T00:00:00"
+  },
+  {
+    "id": "a4b7740d-8c41-4f5d-8845-0eaba6527d90",
+    "title": "Чёрная звезда",
+    "genre": [
+      "мелодрама"
+    ],
+    "duration": 100,
+    "isAvailable": false,
+    "releaseDate": "2010-12-08T00:00:00"
+  },
+  {
+    "id": "752cb5fb-3b73-4b33-8165-3907223e7328",
+    "title": "Небесный поезд",
+    "genre": [
+      "ужасы"
+    ],
+    "duration": 89,
+    "isAvailable": true,
+    "releaseDate": "2018-12-17T00:00:00"
+  },
+  {
+    "id": "4e095599-619d-479c-aa23-4377bbce5975",
+    "title": "Призрачный свет",
+    "genre": [
+      "комедия"
+    ],
+    "duration": 139,
+    "isAvailable": false,
+    "releaseDate": "2007-02-09T00:00:00"
+  },
+  {
+    "id": "53a63f21-c4fa-45f5-bbd8-6a72f9a7eb39",
+    "title": "Эхо будущего",
+    "genre": [
+      "фантастика"
+    ],
+    "duration": 121,
+    "isAvailable": true,
+    "releaseDate": "2005-04-10T00:00:00"
+  },
+  {
+    "id": "c60294fd-ecc3-4d41-b922-e693d9df0666",
+    "title": "Туман",
+    "genre": [
+      "мелодрама"
+    ],
+    "duration": 131,
+    "isAvailable": false,
+    "releaseDate": "1997-12-20T00:00:00"
+  },
+  {
+    "id": "358a8dc3-2840-4195-bc49-826356928e9d",
+    "title": "Летний дождь",
+    "genre": [
+      "мелодрама"
+    ],
+    "duration": 107,
+    "isAvailable": false,
+    "releaseDate": "2012-09-30T00:00:00"
+  },
+  {
+    "id": "3c6a0deb-9f44-413e-a339-c958bbd1b584",
+    "title": "Забытый берег",
+    "genre": [
+      "триллер",
+      "детектив"
+    ],
+    "duration": 98,
+    "isAvailable": false,
+    "releaseDate": "2001-04-06T00:00:00"
+  },
+  {
+    "id": "de309d55-e0c1-4c69-a42c-fd09c185260d",
+    "title": "Снежный барс",
+    "genre": [
+      "ужасы"
+    ],
+    "duration": 154,
+    "isAvailable": false,
+    "releaseDate": "2021-03-05T00:00:00"
+  }
+]

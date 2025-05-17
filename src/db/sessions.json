@@ -1,0 +1,162 @@
+[
+  {
+    "id": "e940f4de-714a-44ee-b6ec-dfd7caf4bf7e",
+    "movieId": "unknown",
+    "room": 3,
+    "dateTime": "2025-05-18T01:50:00.000Z",
+    "ticketsLeft": 30,
+    "is3D": true
+  },
+  {
+    "id": "12d2e919-b599-470a-8465-79853d900d11",
+    "movieId": "c60294fd-ecc3-4d41-b922-e693d9df0666",
+    "room": 4,
+    "dateTime": "2025-05-18T10:48",
+    "ticketsLeft": 11,
+    "is3D": true
+  },
+  {
+    "id": "d68a6417-965a-4a95-8255-798d11ff300c",
+    "movieId": "6d439624-50f0-434e-a913-71b9e24900b1",
+    "room": 2,
+    "dateTime": "2025-05-18T13:48",
+    "ticketsLeft": 80,
+    "is3D": true
+  },
+  {
+    "id": "a97d1c2b-2b80-4189-a0e9-cfb77b331eec",
+    "movieId": "752cb5fb-3b73-4b33-8165-3907223e7328",
+    "room": 5,
+    "dateTime": "2025-05-18T16:48",
+    "ticketsLeft": 8,
+    "is3D": false
+  },
+  {
+    "id": "476e7215-5399-4863-a5d4-de53e27d12c2",
+    "movieId": "a4b7740d-8c41-4f5d-8845-0eaba6527d90",
+    "room": 5,
+    "dateTime": "2025-05-18T19:48",
+    "ticketsLeft": 59,
+    "is3D": false
+  },
+  {
+    "id": "134a0edf-2e1a-4b17-86c8-a7fa3ee5ff84",
+    "movieId": "358a8dc3-2840-4195-bc49-826356928e9d",
+    "room": 1,
+    "dateTime": "2025-05-18T22:48",
+    "ticketsLeft": 87,
+    "is3D": true
+  },
+  {
+    "id": "c4fa7f3e-f6dd-421c-9582-8840fa55386f",
+    "movieId": "358a8dc3-2840-4195-bc49-826356928e9d",
+    "room": 3,
+    "dateTime": "2025-05-19T01:48",
+    "ticketsLeft": 98,
+    "is3D": false
+  },
+  {
+    "id": "020cf4c8-7dff-4e98-8330-3b05665ff103",
+    "movieId": "6d439624-50f0-434e-a913-71b9e24900b1",
+    "room": 3,
+    "dateTime": "2025-05-19T04:48",
+    "ticketsLeft": 55,
+    "is3D": true
+  },
+  {
+    "id": "931d3032-71a3-43de-94ae-404325a6f9fb",
+    "movieId": "4e095599-619d-479c-aa23-4377bbce5975",
+    "room": 1,
+    "dateTime": "2025-05-19T07:48",
+    "ticketsLeft": 92,
+    "is3D": false
+  },
+  {
+    "id": "f165a91d-8150-42e1-850f-cd69a7e61190",
+    "movieId": "c60294fd-ecc3-4d41-b922-e693d9df0666",
+    "room": 2,
+    "dateTime": "2025-05-19T10:48",
+    "ticketsLeft": 64,
+    "is3D": true
+  },
+  {
+    "id": "c1776f03-c171-4e84-bc01-53da5d9ac8d4",
+    "movieId": "a3ccca9e-9bb5-45c8-8a9f-df10b1d0354f",
+    "room": 5,
+    "dateTime": "2025-05-19T13:48",
+    "ticketsLeft": 77,
+    "is3D": true
+  },
+  {
+    "id": "5ec23596-f19b-484e-a665-bd1726f5723e",
+    "movieId": "c4c9a10f-b144-4eef-81dc-1f4008ddd666",
+    "room": 3,
+    "dateTime": "2025-05-19T16:48",
+    "ticketsLeft": 97,
+    "is3D": true
+  },
+  {
+    "id": "b69c81e5-039f-4a71-8867-8f67de02d95b",
+    "movieId": "358a8dc3-2840-4195-bc49-826356928e9d",
+    "room": 5,
+    "dateTime": "2025-05-19T19:48",
+    "ticketsLeft": 0,
+    "is3D": false
+  },
+  {
+    "id": "9d528ea8-ecd4-4e13-be86-30720e56f7ac",
+    "movieId": "53a63f21-c4fa-45f5-bbd8-6a72f9a7eb39",
+    "room": 1,
+    "dateTime": "2025-05-19T22:48",
+    "ticketsLeft": 14,
+    "is3D": false
+  },
+  {
+    "id": "266c9d35-125b-4a17-b7fc-371413109caf",
+    "movieId": "a3ccca9e-9bb5-45c8-8a9f-df10b1d0354f",
+    "room": 2,
+    "dateTime": "2025-05-20T01:48",
+    "ticketsLeft": 7,
+    "is3D": true
+  },
+  {
+    "id": "0a1bb9ac-9e8c-4a04-bbac-ce0ad87cf25e",
+    "movieId": "3c6a0deb-9f44-413e-a339-c958bbd1b584",
+    "room": 1,
+    "dateTime": "2025-05-20T04:48",
+    "ticketsLeft": 10,
+    "is3D": false
+  },
+  {
+    "id": "f86c8198-31eb-4d16-afe0-6a882aa84417",
+    "movieId": "df1d7a46-51ac-4087-9e55-2619eb645d9e",
+    "room": 5,
+    "dateTime": "2025-05-20T07:48",
+    "ticketsLeft": 98,
+    "is3D": true
+  },
+  {
+    "id": "0015d16a-3f92-408f-b7d5-e0d1fc507427",
+    "movieId": "c4c9a10f-b144-4eef-81dc-1f4008ddd666",
+    "room": 4,
+    "dateTime": "2025-05-20T10:48",
+    "ticketsLeft": 70,
+    "is3D": true
+  },
+  {
+    "id": "8cb04f2a-adc6-402d-99a2-cb15d6c9a34f",
+    "movieId": "14fdb32d-0932-456d-bd1e-9615b73fe78f",
+    "room": 5,
+    "dateTime": "2025-05-20T13:48",
+    "ticketsLeft": 77,
+    "is3D": false
+  },
+  {
+    "id": "3b7a2745-d802-443c-892c-7f4c77f91fb3",
+    "movieId": "15f933b2-90fc-4409-b448-e3c1950953ae",
+    "room": 5,
+    "dateTime": "2025-05-20T16:48",
+    "ticketsLeft": 96,
+    "is3D": true
+  }
+]
