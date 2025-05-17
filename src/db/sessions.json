@@ -12,14 +12,14 @@
     "movieId": "c60294fd-ecc3-4d41-b922-e693d9df0666",
     "room": 4,
     "dateTime": "2025-05-18T10:48",
-    "ticketsLeft": 11,
+    "ticketsLeft": 33,
     "is3D": true
   },
   {
     "id": "d68a6417-965a-4a95-8255-798d11ff300c",
-    "movieId": "6d439624-50f0-434e-a913-71b9e24900b1",
-    "room": 2,
-    "dateTime": "2025-05-18T13:48",
+    "movieId": "unknown",
+    "room": 5,
+    "dateTime": "2025-05-18T10:48:00.000Z",
     "ticketsLeft": 80,
     "is3D": true
   },
